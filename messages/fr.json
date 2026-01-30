@@ -1,0 +1,119 @@
+{
+    "nav": {
+        "features": "Fonctionnalités",
+        "pricing": "Tarifs",
+        "docs": "Documentation",
+        "signIn": "Se connecter"
+    },
+    "hero": {
+        "badge": "Analyse maintenant plus de 10 millions de prêts par mois",
+        "title": "Arrêtez la fraude. Approuvez plus de prêts. En temps réel.",
+        "subtitle": "Intelligence de prêt alimentée par l'IA qui détecte la fraude et prédit la capacité de remboursement avec une précision de 95%. Approuvez 30% de prêts en pluswhile réduisant la fraude de 85%.",
+        "cta": {
+            "trial": "Commencer l'essai gratuit",
+            "demo": "Voir la démo"
+        },
+        "trust": {
+            "soc2": "Certifié SOC 2",
+            "uptime": "Disponibilité de 99,9%",
+            "loans": "Plus de 10 millions de prêts analysés"
+        },
+        "metrics": {
+            "fraudPrevented": "Fraude prévenue",
+            "loansApproved": "Prêts approuvés",
+            "lenders": "Prêteurs"
+        }
+    },
+    "features": {
+        "title": "Tout ce dont vous avez besoin pour prêter intelligemment",
+        "subtitle": "Des outils d'IA puissants qui s'intègrent parfaitement dans votre flux de travail de prêt",
+        "list": {
+            "fraud": {
+                "title": "Détection de fraude en temps réel",
+                "description": "Identifiez instantanément les modèles suspects grâce à la détection de fraude alimentée par l'IA."
+            },
+            "scoring": {
+                "title": "Notation de crédit par IA",
+                "description": "Modèles d'apprentissage automatique avancés qui prédisent la capacité de remboursement avec une précision de 95%."
+            },
+            "affordability": {
+                "title": "Analyse de l'abordabilité",
+                "description": "Analyse complète des revenus et des dépenses pour de meilleures décisions de prêt."
+            },
+            "speed": {
+                "title": "Décisions instantanées (<200ms)",
+                "description": "Réponses API ultra-rapides qui maintiennent la fluidité de votre application."
+            },
+            "explainable": {
+                "title": "IA explicable",
+                "description": "Prise de décision transparente avec un raisonnement détaillé pour chaque verdict."
+            },
+            "integrations": {
+                "title": "Plus de 50 intégrations",
+                "description": "Connectez-vous facilement à votre infrastructure de prêt existante."
+            }
+        }
+    },
+    "testimonials": {
+        "title": "Approuvé par les principaux prêteurs",
+        "rating": "4,9/5 sur G2 (127 avis)"
+    },
+    "cta": {
+        "title": "Prêt à transformer vos prêts?",
+        "subtitle": "Rejoignez plus de 500 prêteurs utilisant LendGuard AI pour prendre des décisions de prêt plus intelligentes. Commencez votre essai gratuit aujourd'hui - aucune carte de crédit requise.",
+        "emailPlaceholder": "Entrez votre email",
+        "getStarted": "Commencer",
+        "trial": "Essai gratuit de 14 jours • Aucune carte de crédit requise • Annulez à tout moment",
+        "codeComment": "// Intégration rapide"
+    },
+    "footer": {
+        "privacy": "Confidentialité",
+        "terms": "Conditions",
+        "security": "Sécurité",
+        "contact": "Contact",
+        "copyright": "© 2025 LendGuard AI. Tous droits réservés."
+    },
+    "auth": {
+        "login": {
+            "title": "Bienvenue",
+            "subtitle": "Connectez-vous à votre compte LendGuard AI",
+            "email": "Adresse e-mail",
+            "emailPlaceholder": "vous@entreprise.com",
+            "password": "Mot de passe",
+            "passwordPlaceholder": "••••••••",
+            "forgotPassword": "Mot de passe oublié?",
+            "signInButton": "Se connecter",
+            "signingIn": "Connexion en cours...",
+            "noAccount": "Vous n'avez pas de compte?",
+            "createAccount": "Créer un maintenant",
+            "backToHome": "Retour à l'accueil",
+            "invalidCredentials": "E-mail ou mot de passe invalide",
+            "error": "Une erreur s'est produite. Veuillez réessayer."
+        },
+        "register": {
+            "title": "Créer un compte",
+            "subtitle": "Rejoignez LendGuard AI aujourd'hui",
+            "name": "Nom complet",
+            "namePlaceholder": "Jean Dupont",
+            "email": "Adresse e-mail",
+            "emailPlaceholder": "vous@entreprise.com",
+            "password": "Mot de passe",
+            "passwordPlaceholder": "••••••••",
+            "passwordHint": "Doit contenir au moins 8 caractères",
+            "confirmPassword": "Confirmer le mot de passe",
+            "createButton": "Créer un compte",
+            "creating": "Création du compte...",
+            "haveAccount": "Vous avez déjà un compte?",
+            "signIn": "Se connecter",
+            "backToHome": "Retour à l'accueil",
+            "passwordMismatch": "Les mots de passe ne correspondent pas",
+            "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+            "success": "Compte créé avec succès! Redirection vers la connexion...",
+            "error": "Une erreur s'est produite. Veuillez réessayer.",
+            "termsText": "En créant un compte, vous acceptez nos",
+            "termsLink": "Conditions d'utilisation",
+            "and": "et",
+            "privacyLink": "Politique de confidentialité"
+        }
+    }
+}

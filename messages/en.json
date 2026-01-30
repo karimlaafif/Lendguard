@@ -1,0 +1,119 @@
+{
+    "nav": {
+        "features": "Features",
+        "pricing": "Pricing",
+        "docs": "Documentation",
+        "signIn": "Sign In"
+    },
+    "hero": {
+        "badge": "Now analyzing 10M+ loans monthly",
+        "title": "Stop Fraud. Approve More Loans. In Real-Time.",
+        "subtitle": "AI-powered loan intelligence that detects fraud and predicts repayment ability with 95% accuracy. Approve 30% more loans while cutting fraud by 85%.",
+        "cta": {
+            "trial": "Start Free Trial",
+            "demo": "Watch Demo"
+        },
+        "trust": {
+            "soc2": "SOC 2 Certified",
+            "uptime": "99.9% Uptime",
+            "loans": "10M+ Loans Analyzed"
+        },
+        "metrics": {
+            "fraudPrevented": "Fraud Prevented",
+            "loansApproved": "Loans Approved",
+            "lenders": "Lenders"
+        }
+    },
+    "features": {
+        "title": "Everything you need to lend smarter",
+        "subtitle": "Powerful AI tools that integrate seamlessly into your lending workflow",
+        "list": {
+            "fraud": {
+                "title": "Real-Time Fraud Detection",
+                "description": "Identify suspicious patterns instantly with AI-powered fraud detection."
+            },
+            "scoring": {
+                "title": "AI Credit Scoring",
+                "description": "Advanced ML models that predict repayment ability with 95% accuracy."
+            },
+            "affordability": {
+                "title": "Affordability Analysis",
+                "description": "Comprehensive income and expense analysis for better lending decisions."
+            },
+            "speed": {
+                "title": "Instant Decisions (<200ms)",
+                "description": "Lightning-fast API responses that keep your application flow smooth."
+            },
+            "explainable": {
+                "title": "Explainable AI",
+                "description": "Transparent decision-making with detailed reasoning for every verdict."
+            },
+            "integrations": {
+                "title": "50+ Integrations",
+                "description": "Seamlessly connect with your existing lending infrastructure."
+            }
+        }
+    },
+    "testimonials": {
+        "title": "Trusted by leading lenders",
+        "rating": "4.9/5 on G2 (127 reviews)"
+    },
+    "cta": {
+        "title": "Ready to transform your lending?",
+        "subtitle": "Join 500+ lenders using LendGuard AI to make smarter lending decisions. Start your free trial today - no credit card required.",
+        "emailPlaceholder": "Enter your email",
+        "getStarted": "Get Started",
+        "trial": "Free 14-day trial • No credit card required • Cancel anytime",
+        "codeComment": "// Quick Integration"
+    },
+    "footer": {
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "security": "Security",
+        "contact": "Contact",
+        "copyright": "© 2025 LendGuard AI. All rights reserved."
+    },
+    "auth": {
+        "login": {
+            "title": "Welcome Back",
+            "subtitle": "Sign in to your LendGuard AI account",
+            "email": "Email Address",
+            "emailPlaceholder": "you@company.com",
+            "password": "Password",
+            "passwordPlaceholder": "••••••••",
+            "forgotPassword": "Forgot password?",
+            "signInButton": "Sign In",
+            "signingIn": "Signing in...",
+            "noAccount": "Don't have an account?",
+            "createAccount": "Create one now",
+            "backToHome": "Back to Home",
+            "invalidCredentials": "Invalid email or password",
+            "error": "Something went wrong. Please try again."
+        },
+        "register": {
+            "title": "Create Account",
+            "subtitle": "Join LendGuard AI today",
+            "name": "Full Name",
+            "namePlaceholder": "John Doe",
+            "email": "Email Address",
+            "emailPlaceholder": "you@company.com",
+            "password": "Password",
+            "passwordPlaceholder": "••••••••",
+            "passwordHint": "Must be at least 8 characters",
+            "confirmPassword": "Confirm Password",
+            "createButton": "Create Account",
+            "creating": "Creating Account...",
+            "haveAccount": "Already have an account?",
+            "signIn": "Sign in",
+            "backToHome": "Back to Home",
+            "passwordMismatch": "Passwords do not match",
+            "passwordTooShort": "Password must be at least 8 characters",
+            "success": "Account created successfully! Redirecting to login...",
+            "error": "Something went wrong. Please try again.",
+            "termsText": "By creating an account, you agree to our",
+            "termsLink": "Terms of Service",
+            "and": "and",
+            "privacyLink": "Privacy Policy"
+        }
+    }
+}
