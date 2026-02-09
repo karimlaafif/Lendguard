@@ -1,0 +1,10 @@
+# ETL Pipeline Dependencies
+clickhouse-driver==0.2.10
+pandas
+numpy
+scikit-learn
+scipy
+python-dotenv
+sqlalchemy
+requests
+pytz
