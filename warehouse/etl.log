@@ -1,0 +1,144 @@
+2026-02-05 21:51:42,518 - ERROR - ClickHouse connection failed: Connection.__init__() got an unexpected keyword argument 'allow_suspicious_low_cardinality_types'
+2026-02-05 21:51:42,519 - ERROR - Fatal error: Connection.__init__() got an unexpected keyword argument 'allow_suspicious_low_cardinality_types'
+2026-02-05 21:51:50,457 - INFO - ClickHouse connection established
+2026-02-05 21:51:50,458 - INFO - Starting ETL Pipeline...
+2026-02-05 21:51:50,469 - ERROR - Query execution failed: Code: 516.
+DB::Exception: default: Authentication failed: password is incorrect, or there is no user with such name.
+
+If you use ClickHouse Cloud, the password can be reset at https://clickhouse.cloud/
+on the settings page for the corresponding service.
+
+If you have installed ClickHouse and forgot password you can reset it in the configuration file.
+The password for default user is typically located at /etc/clickhouse-server/users.d/default-password.xml
+and deleting this file will reset the password.
+See also /etc/clickhouse-server/users.xml on the server where ClickHouse is installed.
+
+. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000001652152a
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000deab98e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000deab2c9
+3. DB::AccessControl::authenticate(DB::Credentials const&, Poco::Net::IPAddress const&, DB::ClientInfo const&) const @ 0x0000000019d0e6d6
+4. DB::Session::authenticate(DB::Credentials const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001b4d242b
+5. DB::Session::authenticate(String const&, String const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001b4d18f2
+6. DB::TCPHandler::receiveHello() @ 0x000000001ce9cad0
+7. DB::TCPHandler::runImpl() @ 0x000000001ce8aeb5
+8. DB::TCPHandler::run() @ 0x000000001ceb1ee4
+9. Poco::Net::TCPServerConnection::start() @ 0x0000000022215087
+10. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022215566
+11. Poco::PooledThread::run() @ 0x00000000221d4a5c
+12. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000221d2f0f
+13. ? @ 0x0000000000094ac3
+14. __clone @ 0x0000000000125a74
+
+2026-02-05 21:51:50,472 - ERROR - Pipeline failed: Code: 516.
+DB::Exception: default: Authentication failed: password is incorrect, or there is no user with such name.
+
+If you use ClickHouse Cloud, the password can be reset at https://clickhouse.cloud/
+on the settings page for the corresponding service.
+
+If you have installed ClickHouse and forgot password you can reset it in the configuration file.
+The password for default user is typically located at /etc/clickhouse-server/users.d/default-password.xml
+and deleting this file will reset the password.
+See also /etc/clickhouse-server/users.xml on the server where ClickHouse is installed.
+
+. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000001652152a
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000deab98e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000deab2c9
+3. DB::AccessControl::authenticate(DB::Credentials const&, Poco::Net::IPAddress const&, DB::ClientInfo const&) const @ 0x0000000019d0e6d6
+4. DB::Session::authenticate(DB::Credentials const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001b4d242b
+5. DB::Session::authenticate(String const&, String const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001b4d18f2
+6. DB::TCPHandler::receiveHello() @ 0x000000001ce9cad0
+7. DB::TCPHandler::runImpl() @ 0x000000001ce8aeb5
+8. DB::TCPHandler::run() @ 0x000000001ceb1ee4
+9. Poco::Net::TCPServerConnection::start() @ 0x0000000022215087
+10. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022215566
+11. Poco::PooledThread::run() @ 0x00000000221d4a5c
+12. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000221d2f0f
+13. ? @ 0x0000000000094ac3
+14. __clone @ 0x0000000000125a74
+
+2026-02-05 21:52:08,845 - INFO - ClickHouse connection established
+2026-02-05 21:52:08,845 - INFO - Starting ETL Pipeline...
+2026-02-05 21:52:08,857 - ERROR - Query execution failed: 401 Client Error: Unauthorized for url: http://localhost:8123/?query=SHOW+DATABASES&user=default
+2026-02-05 21:52:08,857 - ERROR - Pipeline failed: 401 Client Error: Unauthorized for url: http://localhost:8123/?query=SHOW+DATABASES&user=default
+2026-02-05 21:52:38,902 - INFO - ClickHouse connection established
+2026-02-05 21:52:38,902 - INFO - Starting ETL Pipeline...
+2026-02-05 21:52:38,913 - ERROR - Query execution failed: Code: 516.
+DB::Exception: default: Authentication failed: password is incorrect, or there is no user with such name.
+
+If you use ClickHouse Cloud, the password can be reset at https://clickhouse.cloud/
+on the settings page for the corresponding service.
+
+If you have installed ClickHouse and forgot password you can reset it in the configuration file.
+The password for default user is typically located at /etc/clickhouse-server/users.d/default-password.xml
+and deleting this file will reset the password.
+See also /etc/clickhouse-server/users.xml on the server where ClickHouse is installed.
+
+. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000001652152a
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000deab98e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000deab2c9
+3. DB::AccessControl::authenticate(DB::Credentials const&, Poco::Net::IPAddress const&, DB::ClientInfo const&) const @ 0x0000000019d0e6d6
+4. DB::Session::authenticate(DB::Credentials const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001b4d242b
+5. DB::Session::authenticate(String const&, String const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001b4d18f2
+6. DB::TCPHandler::receiveHello() @ 0x000000001ce9cad0
+7. DB::TCPHandler::runImpl() @ 0x000000001ce8aeb5
+8. DB::TCPHandler::run() @ 0x000000001ceb1ee4
+9. Poco::Net::TCPServerConnection::start() @ 0x0000000022215087
+10. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022215566
+11. Poco::PooledThread::run() @ 0x00000000221d4a5c
+12. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000221d2f0f
+13. ? @ 0x0000000000094ac3
+14. __clone @ 0x0000000000125a74
+
+2026-02-05 21:52:38,914 - ERROR - Pipeline failed: Code: 516.
+DB::Exception: default: Authentication failed: password is incorrect, or there is no user with such name.
+
+If you use ClickHouse Cloud, the password can be reset at https://clickhouse.cloud/
+on the settings page for the corresponding service.
+
+If you have installed ClickHouse and forgot password you can reset it in the configuration file.
+The password for default user is typically located at /etc/clickhouse-server/users.d/default-password.xml
+and deleting this file will reset the password.
+See also /etc/clickhouse-server/users.xml on the server where ClickHouse is installed.
+
+. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000001652152a
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000deab98e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000deab2c9
+3. DB::AccessControl::authenticate(DB::Credentials const&, Poco::Net::IPAddress const&, DB::ClientInfo const&) const @ 0x0000000019d0e6d6
+4. DB::Session::authenticate(DB::Credentials const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001b4d242b
+5. DB::Session::authenticate(String const&, String const&, Poco::Net::SocketAddress const&, std::vector<String, std::allocator<String>> const&) @ 0x000000001b4d18f2
+6. DB::TCPHandler::receiveHello() @ 0x000000001ce9cad0
+7. DB::TCPHandler::runImpl() @ 0x000000001ce8aeb5
+8. DB::TCPHandler::run() @ 0x000000001ceb1ee4
+9. Poco::Net::TCPServerConnection::start() @ 0x0000000022215087
+10. Poco::Net::TCPServerDispatcher::run() @ 0x0000000022215566
+11. Poco::PooledThread::run() @ 0x00000000221d4a5c
+12. Poco::ThreadImpl::runnableEntry(void*) @ 0x00000000221d2f0f
+13. ? @ 0x0000000000094ac3
+14. __clone @ 0x0000000000125a74
+
+2026-02-05 21:53:13,961 - INFO - ClickHouse connection established
+2026-02-05 21:53:13,961 - INFO - Starting ETL Pipeline...
+2026-02-05 21:53:14,014 - INFO - [OK] bronze_layer exists
+2026-02-05 21:53:14,014 - INFO - [OK] silver_layer exists
+2026-02-05 21:53:14,014 - INFO - [OK] gold_layer exists
+2026-02-05 21:53:14,014 - INFO - Pipeline configuration:
+2026-02-05 21:53:14,014 - INFO -    ClickHouse Host: localhost
+2026-02-05 21:53:14,015 - INFO -    ClickHouse Port: 9000
+2026-02-05 21:53:14,015 - INFO - Extracting data to Bronze layer...
+2026-02-05 21:53:14,015 - INFO - [BRONZE] Extraction started
+2026-02-05 21:53:14,015 - INFO - [BRONZE] Ready
+2026-02-05 21:53:14,015 - INFO - Transforming Bronze -> Silver...
+2026-02-05 21:53:14,015 - INFO - [SILVER] Transformation started
+2026-02-05 21:53:14,015 - INFO - [SILVER] Ready
+2026-02-05 21:53:14,015 - INFO - Aggregating to Gold layer...
+2026-02-05 21:53:14,015 - INFO - [GOLD] Aggregation started
+2026-02-05 21:53:14,016 - INFO - [GOLD] Ready
+2026-02-05 21:53:14,016 - INFO - Pipeline completed in 0.05 seconds
