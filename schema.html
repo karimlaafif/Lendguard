@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LendGuard - PostgreSQL Schema</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+        .schema-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .table-card {
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            background: #f8f9ff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .table-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+        .table-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .column-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .column-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+            color: #555;
+        }
+        .column-item:last-child {
+            border-bottom: none;
+        }
+        .column-name {
+            font-weight: 600;
+            color: #333;
+            font-family: 'Courier New', monospace;
+        }
+        .column-type {
+            color: #764ba2;
+            font-family: 'Courier New', monospace;
+            margin: 0 5px;
+        }
+        .column-nullable {
+            color: #999;
+            font-size: 11px;
+            font-style: italic;
+        }
+        .enums-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 3px solid #667eea;
+        }
+        .enum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .enum-card {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            background: #fff;
+        }
+        .enum-name {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        .enum-values {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 13px;
+        }
+        .enum-values li {
+            padding: 4px 0;
+            color: #555;
+            padding-left: 15px;
+            position: relative;
+        }
+        .enum-values li:before {
+            content: "• ";
+            position: absolute;
+            left: 0;
+            color: #764ba2;
+        }
+        .info-box {
+            background: #e8f0ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏦 LendGuard - PostgreSQL Database Schema</h1>
+        
+        <div class="info-box">
+            <strong>Database:</strong> lendguard | 
+            <strong>Host:</strong> localhost:5432 | 
+            <strong>Status:</strong> ✅ Running
+        </div>
+
+        <h2 style="color: #333; margin-top: 30px;">📊 Tables</h2>
+        <div class="schema-grid">
+            <!-- User Table -->
+            <div class="table-card">
+                <div class="table-name">User</div>
+                <ul class="column-list">
+                    <li class="column-item"><span class="column-name">id</span> <span class="column-type">String</span> <span class="column-nullable">PRIMARY KEY</span></li>
+                    <li class="column-item"><span class="column-name">email</span> <span class="column-type">String</span> <span class="column-nullable">UNIQUE</span></li>
+                    <li class="column-item"><span class="column-name">password</span> <span class="column-type">String</span></li>
+                    <li class="column-item"><span class="column-name">name</span> <span class="column-type">String?</span> <span class="column-nullable">nullable</span></li>
+                    <li class="column-item"><span class="column-name">role</span> <span class="column-type">Role</span> <span class="column-nullable">default: USER</span></li>
+                    <li class="column-item"><span class="column-name">emailVerified</span> <span class="column-type">DateTime?</span> <span class="column-nullable">nullable</span></li>
+                    <li class="column-item"><span class="column-name">image</span> <span class="column-type">String?</span> <span class="column-nullable">nullable</span></li>
+                    <li class="column-item"><span class="column-name">createdAt</span> <span class="column-type">DateTime</span> <span class="column-nullable">default: now()</span></li>
+                    <li class="column-item"><span class="column-name">updatedAt</span> <span class="column-type">DateTime</span> <span class="column-nullable">auto-update</span></li>
+                </ul>
+            </div>
+
+            <!-- Loan Table -->
+            <div class="table-card">
+                <div class="table-name">Loan</div>
+                <ul class="column-list">
+                    <li class="column-item"><span class="column-name">id</span> <span class="column-type">String</span> <span class="column-nullable">PRIMARY KEY</span></li>
+                    <li class="column-item"><span class="column-name">userId</span> <span class="column-type">String</span> <span class="column-nullable">FOREIGN KEY</span></li>
+                    <li class="column-item"><span class="column-name">applicantName</span> <span class="column-type">String</span></li>
+                    <li class="column-item"><span class="column-name">age</span> <span class="column-type">Int</span></li>
+                    <li class="column-item"><span class="column-name">income</span> <span class="column-type">Float</span></li>
+                    <li class="column-item"><span class="column-name">creditScore</span> <span class="column-type">Int</span></li>
+                    <li class="column-item"><span class="column-name">loanAmount</span> <span class="column-type">Float</span></li>
+                    <li class="column-item"><span class="column-name">riskScore</span> <span class="column-type">Float?</span> <span class="column-nullable">ML prediction</span></li>
+                    <li class="column-item"><span class="column-name">defaultProbability</span> <span class="column-type">Float?</span> <span class="column-nullable">ML prediction</span></li>
+                    <li class="column-item"><span class="column-name">decision</span> <span class="column-type">Decision?</span></li>
+                </ul>
+            </div>
+
+            <!-- LoanApplication Table -->
+            <div class="table-card">
+                <div class="table-name">LoanApplication</div>
+                <ul class="column-list">
+                    <li class="column-item"><span class="column-name">id</span> <span class="column-type">String</span> <span class="column-nullable">PRIMARY KEY</span></li>
+                    <li class="column-item"><span class="column-name">userId</span> <span class="column-type">String</span> <span class="column-nullable">FOREIGN KEY</span></li>
+                    <li class="column-item"><span class="column-name">amount</span> <span class="column-type">Float</span></li>
+                    <li class="column-item"><span class="column-name">purpose</span> <span class="column-type">String</span></li>
+                    <li class="column-item"><span class="column-name">term</span> <span class="column-type">Int</span></li>
+                    <li class="column-item"><span class="column-name">creditScore</span> <span class="column-type">Int?</span> <span class="column-nullable">nullable</span></li>
+                    <li class="column-item"><span class="column-name">riskScore</span> <span class="column-type">Float?</span> <span class="column-nullable">ML score</span></li>
+                    <li class="column-item"><span class="column-name">affordabilityIndex</span> <span class="column-type">Float?</span> <span class="column-nullable">ML score</span></li>
+                    <li class="column-item"><span class="column-name">fraudScore</span> <span class="column-type">Float?</span> <span class="column-nullable">ML score</span></li>
+                    <li class="column-item"><span class="column-name">decision</span> <span class="column-type">String</span></li>
+                </ul>
+            </div>
+
+            <!-- Account Table -->
+            <div class="table-card">
+                <div class="table-name">Account (OAuth)</div>
+                <ul class="column-list">
+                    <li class="column-item"><span class="column-name">id</span> <span class="column-type">String</span> <span class="column-nullable">PRIMARY KEY</span></li>
+                    <li class="column-item"><span class="column-name">userId</span> <span class="column-type">String</span> <span class="column-nullable">FOREIGN KEY</span></li>
+                    <li class="column-item"><span class="column-name">provider</span> <span class="column-type">String</span></li>
+                    <li class="column-item"><span class="column-name">providerAccountId</span> <span class="column-type">String</span></li>
+                    <li class="column-item"><span class="column-name">refresh_token</span> <span class="column-type">String?</span></li>
+                    <li class="column-item"><span class="column-name">access_token</span> <span class="column-type">String?</span></li>
+                    <li class="column-item"><span class="column-name">expires_at</span> <span class="column-type">Int?</span></li>
+                    <li class="column-item"><span class="column-name">token_type</span> <span class="column-type">String?</span></li>
+                    <li class="column-item"><span class="column-name">scope</span> <span class="column-type">String?</span></li>
+                </ul>
+            </div>
+
+            <!-- Session Table -->
+            <div class="table-card">
+                <div class="table-name">Session</div>
+                <ul class="column-list">
+                    <li class="column-item"><span class="column-name">id</span> <span class="column-type">String</span> <span class="column-nullable">PRIMARY KEY</span></li>
+                    <li class="column-item"><span class="column-name">sessionToken</span> <span class="column-type">String</span> <span class="column-nullable">UNIQUE</span></li>
+                    <li class="column-item"><span class="column-name">userId</span> <span class="column-type">String</span> <span class="column-nullable">FOREIGN KEY</span></li>
+                    <li class="column-item"><span class="column-name">expires</span> <span class="column-type">DateTime</span></li>
+                </ul>
+            </div>
+
+            <!-- PasswordResetToken Table -->
+            <div class="table-card">
+                <div class="table-name">PasswordResetToken</div>
+                <ul class="column-list">
+                    <li class="column-item"><span class="column-name">token</span> <span class="column-type">String</span> <span class="column-nullable">PRIMARY KEY</span></li>
+                    <li class="column-item"><span class="column-name">email</span> <span class="column-type">String</span></li>
+                    <li class="column-item"><span class="column-name">expires</span> <span class="column-type">DateTime</span></li>
+                    <li class="column-item"><span class="column-name">createdAt</span> <span class="column-type">DateTime</span> <span class="column-nullable">default: now()</span></li>
+                </ul>
+            </div>
+
+            <!-- VerificationToken Table -->
+            <div class="table-card">
+                <div class="table-name">VerificationToken</div>
+                <ul class="column-list">
+                    <li class="column-item"><span class="column-name">token</span> <span class="column-type">String</span> <span class="column-nullable">PRIMARY KEY</span></li>
+                    <li class="column-item"><span class="column-name">identifier</span> <span class="column-type">String</span></li>
+                    <li class="column-item"><span class="column-name">expires</span> <span class="column-type">DateTime</span></li>
+                    <li class="column-item"><span class="column-name">createdAt</span> <span class="column-type">DateTime</span> <span class="column-nullable">default: now()</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Enums Section -->
+        <div class="enums-section">
+            <h2 style="color: #333; margin-top: 0;">📋 Enumerations</h2>
+            <div class="enum-grid">
+                <div class="enum-card">
+                    <div class="enum-name">Role</div>
+                    <ul class="enum-values">
+                        <li>USER</li>
+                        <li>ADMIN</li>
+                    </ul>
+                </div>
+
+                <div class="enum-card">
+                    <div class="enum-name">Education</div>
+                    <ul class="enum-values">
+                        <li>HIGH_SCHOOL</li>
+                        <li>BACHELOR</li>
+                        <li>MASTER</li>
+                        <li>PHD</li>
+                    </ul>
+                </div>
+
+                <div class="enum-card">
+                    <div class="enum-name">EmploymentType</div>
+                    <ul class="enum-values">
+                        <li>FULL_TIME</li>
+                        <li>PART_TIME</li>
+                        <li>SELF_EMPLOYED</li>
+                        <li>UNEMPLOYED</li>
+                    </ul>
+                </div>
+
+                <div class="enum-card">
+                    <div class="enum-name">MaritalStatus</div>
+                    <ul class="enum-values">
+                        <li>SINGLE</li>
+                        <li>MARRIED</li>
+                        <li>DIVORCED</li>
+                    </ul>
+                </div>
+
+                <div class="enum-card">
+                    <div class="enum-name">LoanPurpose</div>
+                    <ul class="enum-values">
+                        <li>DEBT_CONSOLIDATION</li>
+                        <li>HOME_IMPROVEMENT</li>
+                        <li>BUSINESS</li>
+                        <li>AUTO</li>
+                        <li>EDUCATION</li>
+                        <li>OTHER</li>
+                    </ul>
+                </div>
+
+                <div class="enum-card">
+                    <div class="enum-name">Decision</div>
+                    <ul class="enum-values">
+                        <li>APPROVE</li>
+                        <li>REVIEW</li>
+                        <li>REJECT</li>
+                    </ul>
+                </div>
+
+                <div class="enum-card">
+                    <div class="enum-name">LoanStatus</div>
+                    <ul class="enum-values">
+                        <li>PENDING</li>
+                        <li>APPROVED</li>
+                        <li>REJECTED</li>
+                        <li>UNDER_REVIEW</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #eee; text-align: center; color: #666; font-size: 13px;">
+            <p>LendGuard AI - Data Warehouse Schema | Generated: February 5, 2026</p>
+            <p>PostgreSQL Database with Prisma ORM | ML-Ready Schema for Loan Risk Assessment</p>
+        </div>
+    </div>
+</body>
+</html>
